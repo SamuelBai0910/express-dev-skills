@@ -3,6 +3,10 @@
   <ul>
     <% lists.forEach(function(l) { %>
       <li>
+        <form action="/lists/<%= l.id %>?_method=DELETE"
+          class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </form>
         <a href="/lists/<%= l.id %>"><%= l.list %></a>
         <%= l.finished ? 'finished' : 'Ongoing' %>
       </li>

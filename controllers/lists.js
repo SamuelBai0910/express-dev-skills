@@ -4,8 +4,14 @@ module.exports = {
   index,
   show,
   new: AddNew,
-  create
+  create,
+  delete: removeList
 };
+
+function removeList(req, res) {
+  List.deleteOne(req.params.id); 
+  res.redirect('/lists');
+}
 
 function create(req, res) {
   // console.log(req.body);

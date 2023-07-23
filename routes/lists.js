@@ -10,4 +10,7 @@ router.get('/new', listsController.new);
 router.get('/:id', listsController.show);
 // Post /lists
 router.post('/', listsController.create);
+// Delete /lists/:id
+router.delete('/:id', listsController.delete);
+
 module.exports = router;

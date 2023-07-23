@@ -7,8 +7,15 @@ const lists = [
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  deleteOne
 };
+
+function deleteOne(id) {
+  id = parseInt(id);
+  const idx = lists.findIndex(list => list.id === id);
+  lists.splice(idx, 1);
+}
 
 function create(list) {
   list.id = Date.now() % 1000000;
