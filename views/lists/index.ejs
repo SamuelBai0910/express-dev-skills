@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>Express DEV Skills</title>
-</head>
-<body>
-  <a href="/">Home</a>
-  |
-  <a href="/lists">All Lists</a>
+<%- include('../partials/header') %>
+
   <ul>
     <% lists.forEach(function(l) { %>
       <li>
@@ -18,5 +8,5 @@
       </li>
     <% }); %>
   </ul>
-</body>
-</html>
+
+  <%- include('../partials/footer') %>

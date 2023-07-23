@@ -7,13 +7,15 @@ module.exports = {
 
 function show (req, res) {
   res.render('lists/show', {
-    list: List.getOne(req.params.id)
+    list: List.getOne(req.params.id),
+    title: "Details of things"
   });
 }
 
 function index (req, res) {
   res.render('lists/index', {
-    lists: List.getAll()
+    lists: List.getAll(),
+    title: "Things Lists"
   });
 }
 

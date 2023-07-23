@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>Express-show-ejs</title>
-</head>
-<body>
-  <a href="/">Home</a>
-    |
-  <a href="/lists">All Lists</a>
+<%- include('../partials/header') %>
+
   <h3><%= list.list %></h3>
   <h3>finished: <%= list.finished ? 'Yes' : 'Not Yet' %></h3>
-</body>
-</html>
+
+<%- include('../partials/footer') %>
