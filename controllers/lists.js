@@ -2,8 +2,20 @@ const List = require('../models/list');
 
 module.exports = {
   index,
-  show
+  show,
+  new: AddNew,
+  create
 };
+
+function create(req, res) {
+  // console.log(req.body);
+  List.create(req.body);
+  res.redirect('/lists');
+}
+
+function AddNew (req, res) {
+  res.render('lists/new', { title: 'New Things' });
+} 
 
 function show (req, res) {
   res.render('lists/show', {

@@ -6,8 +6,15 @@ const lists = [
 
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create
 };
+
+function create(list) {
+  list.id = Date.now() % 1000000;
+  list.finished = false;
+  lists.push(list);
+}
 
 function getOne(id) {
   id = parseInt(id);

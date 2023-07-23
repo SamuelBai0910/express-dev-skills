@@ -4,7 +4,10 @@ var listsController = require('../controllers/lists');
 
 /* GET lists. */
 router.get('/', listsController.index);
-// Get /todos/:id
+// Get /lists/add  <--Define BEFORE show route
+router.get('/new', listsController.new);
+// Get /lists/:id
 router.get('/:id', listsController.show);
-
+// Post /lists
+router.post('/', listsController.create);
 module.exports = router;
